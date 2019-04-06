@@ -1,11 +1,6 @@
 require 'hyalite'
-#require 'menilite'
+require 'menilite'
 
-class AppView
-  include Hyalite::Component
+require "kame_remocon"
 
-  def render
-    h2(nil, 'Welcome!!!')
-  end
-end
-Hyalite.render(Hyalite.create_element(AppView), $document['.content'])
+Hyalite.render(Hyalite.create_element(Kame::Remocon::Opal::AppView), $document['.content'])

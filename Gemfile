@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'thin'
+gem "kame-remocon"
 
 gem 'opal-haml'
 gem 'hyalite'
@@ -13,4 +14,4 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'sass'
-gem "kame-remocon"
+gem "bcrypt"
