@@ -25,10 +25,4 @@ app = Rack::Builder.app do
   end
 end
 
-Rack::Server.start({
-  app:    app,
-  server: 'thin',
-  Host:   '0.0.0.0',
-  Port:   9292,
-  signals: false,
-})
+run DRb::WebSocket::RackApp.new(app)

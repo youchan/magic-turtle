@@ -73,6 +73,7 @@ GEM
       tilt (>= 1.4)
     parser (2.3.3.1)
       ast (~> 2.2)
+    pg (1.1.4)
     public_suffix (3.0.3)
     rack (2.0.7)
     rack-protection (2.0.5)
@@ -129,6 +130,7 @@ DEPENDENCIES
   kame-remocon
   menilite
   opal-haml
+  pg
   rake
   sass
   sinatra
