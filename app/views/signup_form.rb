@@ -28,7 +28,7 @@ class SignupForm
     notification = @state[:error] ? div({class: 'notification is-danger '}, "エラーです") : nil
 
     div({class: 'signup-form'},
-      h3({}, "Signup"),
+      h3({}, "アカウントの登録"),
       notification,
       p({class: 'control has-icon'},
         input({class: 'input', ref: 'display-name', type: 'text', placeholder: 'Display name'}),
@@ -43,7 +43,7 @@ class SignupForm
         span({class: "icon is-small is-right"}, i({class: 'fas fa-lock'}))
       ),
       p({class: 'control'},
-        button({class: 'button is-primary', onClick: self.method(:on_click) }, "Signup")
+        button({class: 'button is-primary', onClick: self.method(:on_click) }, "登録する")
       )
     )
   end

@@ -30,7 +30,7 @@ class LoginForm
 
   def render
     div({class: 'login-form'},
-      h3({}, "Login"),
+      h3({}, "ログイン"),
       p({class: 'control has-icon'},
         input({class: 'input', ref: 'username', type: 'text', placeholder: 'Username', onKeyPress: self.method(:on_keypress)}),
         span({class: "icon is-small is-right"}, i({class: 'fa fa-user'}))
@@ -39,9 +39,9 @@ class LoginForm
         input({class: 'input', ref: 'password', type: 'password', placeholder: 'Password', onKeyPress: self.method(:on_keypress)}),
         span({class: "icon is-small is-right"}, i({class: 'fa fa-lock'}))
       ),
-      p({class: 'has-text-right'}, a({href: '/signup'}, '> Create account')),
+      p({class: 'has-text-right'}, a({href: '/signup'}, '> アカウントの登録')),
       p({class: 'control'},
-        button({class: 'button is-primary', onClick: self.method(:submit) }, "Login")
+        button({class: 'button is-primary', onClick: self.method(:submit) }, "ログインする")
       )
     )
   end
