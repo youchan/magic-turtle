@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_113723) do
+ActiveRecord::Schema.define(version: 2019_04_24_012821) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "guid"
     t.string "name"
     t.string "uid"
     t.string "password"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "guid"
+    t.string "account_guid", null: false
+    t.text "code", null: false
+    t.text "image", null: false
   end
 
   create_table "sessions", force: :cascade do |t|

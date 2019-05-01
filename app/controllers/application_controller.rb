@@ -1,6 +1,11 @@
 class ApplicationController < Menilite::Controller
   before_action(exclude: ["ApplicationController#login", "Account#signup"]) do
-    raise "Authorization failure" unless Session.auth(session[:session_id])
+    login = Session.auth(session[:session_id])
+    if login
+      Menilite::PrivilegeService.current.privileges << AccountPrivilege.new(login.account)
+    else
+      raise Menilite::Unauthorized.new
+    end
   end
 
   action :login do |username, password|

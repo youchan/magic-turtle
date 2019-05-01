@@ -12,8 +12,7 @@ class Session < Menilite::Model
 
   unless RUBY_ENGINE == 'opal'
     def self.auth(session_id)
-      session = Session.fetch(filter:{session_id: session_id, login: true}).first
-      pp session
+      session = Session.fetch(filter:{session_id: session_id, login: true}, includes: :account).first
       if session && session.expire_at > Time.now
         session.update!(expire_at: Time.now + 5 * 60)
       else
