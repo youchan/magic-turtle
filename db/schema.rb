@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 2019_04_24_012821) do
     t.string "account_guid", null: false
     t.text "code", null: false
     t.text "image", null: false
+    t.string "name"
+    t.boolean "open"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sessions", force: :cascade do |t|

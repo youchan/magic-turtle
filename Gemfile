@@ -3,10 +3,10 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'thin'
-gem "kame-remocon", path: "../kame-remocon"
+gem "kame-remocon"
 
 gem 'opal-haml'
-gem 'hyalite', path: "../hyalite"
+gem 'hyalite'
 gem 'menilite'
 
 gem 'rake'

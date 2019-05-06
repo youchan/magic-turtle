@@ -1,0 +1,10 @@
+!!!
+%html(lang="en" data-framework="hyalite")
+  %head
+    %link{rel:"stylesheet", href:"assets/css/application.css"}
+  %body
+    .content
+      %h1 投稿一覧
+      .post-list
+
+    = ::Opal::Sprockets.javascript_include_tag('list', sprockets: settings.opal.sprockets, prefix: 'assets', debug: true)

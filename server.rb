@@ -45,6 +45,14 @@ class Server < Sinatra::Base
     haml :signup
   end
 
+  get '/list' do
+    if @session = Session.auth(self.session[:session_id])
+      haml :list
+    else
+      redirect to('/login')
+    end
+  end
+
   get "/favicon.ico" do
   end
 end
