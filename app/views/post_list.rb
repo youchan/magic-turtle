@@ -8,8 +8,8 @@ class PostList
   state :modal, nil
 
   def component_did_mount
-    Post.fetch! do |posts|
-      set_state(posts: posts)
+    Post.fetch!(order: :created_at) do |posts|
+      set_state(posts: posts.reverse)
     end
   end
 

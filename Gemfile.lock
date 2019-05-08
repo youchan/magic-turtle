@@ -33,7 +33,7 @@ GEM
       temple (>= 0.8.0)
       tilt
     hike (1.2.3)
-    hyalite (0.3.1)
+    hyalite (0.3.2)
       opal
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
@@ -51,7 +51,7 @@ GEM
       thin (~> 1.7)
     launchy (2.4.3)
       addressable (~> 2.3)
-    menilite (0.5.5)
+    menilite (0.5.6)
       opal
       sinatra-activerecord
     minitest (5.11.3)
