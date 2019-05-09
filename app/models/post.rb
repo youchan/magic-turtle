@@ -8,4 +8,10 @@ class Post < Menilite::Model
   field :updated_at, :time
 
   permit :account_privilege
+
+  action :public_posts, class: true do
+    Menilite::PrivilegeService.disable do
+      Menilite::Serializer.serialize(fetch(filter: {open: true}, includes: :account), :account)
+    end
+  end
 end

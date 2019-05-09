@@ -53,6 +53,10 @@ class Server < Sinatra::Base
     end
   end
 
+  get '/public-list' do
+    haml :public_list
+  end
+
   get "/favicon.ico" do
   end
 end
