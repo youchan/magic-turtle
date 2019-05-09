@@ -1,15 +1,15 @@
 source "https://rubygems.org"
 
-gem 'sinatra'
-gem 'sinatra-contrib'
-gem 'thin'
+gem "sinatra"
+gem "sinatra-contrib"
+gem "thin"
 gem "kame-remocon"
 
-gem 'opal-haml'
-gem 'hyalite'
-gem 'menilite'
+gem "opal-haml"
+gem "hyalite"
+gem "menilite"
 
-gem 'rake'
+gem "rake"
 
 group :development, :test do
   gem "sqlite3"
@@ -19,6 +19,6 @@ group :production do
   gem "pg"
 end
 
-gem 'haml'
-gem 'sass'
+gem "haml"
+gem "sass"
 gem "bcrypt"
