@@ -1,5 +1,9 @@
+unless RUBY_ENGINE == "opal"
+  require "uri"
+end
+
 class ApplicationController < Menilite::Controller
-  before_action(exclude: ["ApplicationController#login", "Account#signup", "Post#public_posts"]) do
+  before_action(exclude: %w(ApplicationController#login ApplicationController#reset_password Account#signup Post#public_posts ResetPasswordRequest#set_password)) do
     login = Session.auth(session[:session_id])
     if login
       Menilite::PrivilegeService.current.privileges << AccountPrivilege.new(login.account)
@@ -24,11 +28,23 @@ class ApplicationController < Menilite::Controller
 
       login = Session.new(account_id: account.id, session_id: session[:session_id], login_at: Time.now, expire_at: Time.now + 5 * 60)
       login.save
-      #settings.sockets.values.flatten.each {|ws| ws.send("login: #{account.name} is logged in.")}
       account.to_h
     else
       raise "Login failed"
     end
+  end
+
+  action :reset_password do |account_id|
+    account = Account.fetch(filter: {id: account_id}).first
+    raise "Can't get account for id: #{account_id}" unless account
+
+    req = ResetPasswordRequest.create(account_id: account.id)
+
+    url = URI.parse(request.url)
+    url.path = "/set_password/#{req.id}"
+
+    SendMail.send_to(account, url)
+    nil
   end
 
   action :my_account do

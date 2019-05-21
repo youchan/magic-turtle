@@ -3,18 +3,26 @@ unless RUBY_ENGINE == 'opal'
 end
 
 class Account < Menilite::Model
-  field :name
-  field :uid
+  field :name, :string, unique: true, presence: true
+  field :uid, :string, unique: true, presence: true
   field :password, :string, client: false
 
-  action :signup, save: true do |password|
-    self.password = BCrypt::Password.create(password)
-    self.save
+  action :signup, save: true do
+    puts ">>>>>>>>>>> signup"
+    #self.save
+    puts ">>>>>>>>>>>> saved"
+    self
+    #ApplicationController.reset_password(self)
   end
 
   unless RUBY_ENGINE == 'opal'
     def auth(password)
       BCrypt::Password.new(self.password) == password
+    end
+
+    def change_password(password)
+      self.password = BCrypt::Password.create(password)
+      self.save
     end
   end
 end

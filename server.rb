@@ -7,6 +7,8 @@ if development?
   require 'sinatra/reloader'
 end
 
+require_relative "./send_mail"
+
 class Server < Sinatra::Base
   OPAL = Opal::Sprockets::Server.new do |server|
     server.append_path "app"
@@ -25,7 +27,7 @@ class Server < Sinatra::Base
     set :protection, except: :json_csrf
   end
 
-  get '/' do
+  get "/" do
     if @session = Session.auth(self.session[:session_id])
       haml :index
     else
@@ -37,15 +39,19 @@ class Server < Sinatra::Base
     haml :index
   end
 
-  get '/login' do
+  get "/login" do
     haml :login
   end
 
-  get '/signup' do
+  get "/signup" do
     haml :signup
   end
 
-  get '/list' do
+  get "/set_password/:requeset_id" do
+    haml :set_password
+  end
+
+  get "/list" do
     if @session = Session.auth(self.session[:session_id])
       haml :list
     else
@@ -53,7 +59,7 @@ class Server < Sinatra::Base
     end
   end
 
-  get '/public-list' do
+  get "/public-list" do
     haml :public_list
   end
 

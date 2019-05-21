@@ -9,9 +9,7 @@ class PublicPosts
 
   def component_did_mount
     Post.public_posts do |_, res|
-      pp res
       posts = res.reverse.map{|data| Menilite::Deserializer.deserialize(Post, data, :account)}
-      pp posts.map(&:account)
       set_state(posts: posts)
     end
   end

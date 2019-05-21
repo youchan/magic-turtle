@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_24_012821) do
+ActiveRecord::Schema.define(version: 2019_05_11_075040) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "guid"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 2019_04_24_012821) do
     t.text "image", null: false
     t.string "name"
     t.boolean "open"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reset_password_requests", force: :cascade do |t|
+    t.string "guid"
+    t.string "account_guid", null: false
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

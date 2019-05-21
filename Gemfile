@@ -22,3 +22,4 @@ end
 gem "haml"
 gem "sass"
 gem "bcrypt"
+gem "sendgrid-ruby"
