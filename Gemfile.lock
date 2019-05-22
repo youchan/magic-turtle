@@ -51,7 +51,7 @@ GEM
       thin (~> 1.7)
     launchy (2.4.3)
       addressable (~> 2.3)
-    menilite (0.5.8)
+    menilite (0.5.9)
       opal
       sinatra-activerecord
     minitest (5.11.3)
