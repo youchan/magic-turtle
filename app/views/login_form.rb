@@ -1,5 +1,3 @@
-require_relative '../controllers/application_controller.rb'
-
 class LoginForm
   include Hyalite::Component
   include Hyalite::Component::ShortHand

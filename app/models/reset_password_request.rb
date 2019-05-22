@@ -1,3 +1,5 @@
+require_relative "./account"
+
 class ResetPasswordRequest < Menilite::Model
   field :account, :reference, class: Account
   field :status, :string, default: "requested"

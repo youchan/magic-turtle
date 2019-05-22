@@ -1,3 +1,5 @@
+require_relative "./account"
+
 class Session < Menilite::Model
   field :account, :reference, class: Account
   field :session_id, :string, client: false
