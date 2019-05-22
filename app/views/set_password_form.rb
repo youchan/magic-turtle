@@ -51,8 +51,8 @@ class SetPasswordForm
         span(class: "icon is-small is-right") { i(class: "fas fa-key") }
       end
       p(class: "control has-icon") do
-        input(class: "input", ref: "re-enter", type: "password", placeholder: "Re-enter")
-        span(class: "icon is-small is-right") { i(class: "far fa-redo-alt") }
+        input(class: "input", ref: "re-enter", type: "password", placeholder: "Re-enter password")
+        span(class: "icon is-small is-right") { i(class: "fas fa-redo-alt") }
       end
       p(class: "control") do
         button({class: "button is-primary", onClick: -> { on_click } }, "パスワードを設定する")

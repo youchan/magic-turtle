@@ -8,9 +8,6 @@ class Account < Menilite::Model
   field :password, :string, client: false
 
   action :signup, save: true do
-    puts ">>>>>>>>>>> signup"
-    #self.save
-    puts ">>>>>>>>>>>> saved"
     self
     #ApplicationController.reset_password(self)
   end

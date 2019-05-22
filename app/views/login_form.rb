@@ -13,10 +13,10 @@ class LoginForm
   end
 
   def submit
-    username = @refs[:username].value
+    email = @refs[:email].value
     password = @refs[:password].value
 
-    ApplicationController.login(username, password) do |status, result|
+    ApplicationController.login(email, password) do |status, result|
       case status
       when :success
         $window.location.href = "/"
@@ -30,8 +30,8 @@ class LoginForm
     div({class: 'login-form'},
       h3({}, "ログイン"),
       p({class: 'control has-icon'},
-        input({class: 'input', ref: 'username', type: 'text', placeholder: 'Username', onKeyPress: self.method(:on_keypress)}),
-        span({class: "icon is-small is-right"}, i({class: 'fa fa-user'}))
+        input({class: 'input', ref: 'email', type: 'text', placeholder: 'Email address', onKeyPress: self.method(:on_keypress)}),
+        span({class: "icon is-small is-right"}, i({class: 'fa fa-envelope'}))
       ),
       p({class: 'control has-icon'},
         input({class: 'input', ref: 'password', type: 'password', placeholder: 'Password', onKeyPress: self.method(:on_keypress)}),
