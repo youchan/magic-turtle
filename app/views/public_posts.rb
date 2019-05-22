@@ -58,9 +58,6 @@ class PublicPosts
             div(class: "post-info") do
               img(class: "thumbnail", src: "data:image/png;base64,#{post.image}", style: {"background-color": :black})
               div(class: "info-box") do
-                p(class: "delete-button") do
-                  button(onClick: -> { set_state(modal: :delete, current_post: post) }) { i(class:"far fa-trash-alt") }
-                end
                 desc("名前", post.name)
                 desc("状態", post.account.name)
                 desc("作成日時", Time.parse(post.created_at).strftime("%Y/%m/%d %H:%M:%S"))
