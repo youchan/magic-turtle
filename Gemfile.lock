@@ -16,8 +16,8 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
     ast (2.4.0)
-    backports (3.14.0)
-    bcrypt (3.1.12)
+    backports (3.15.0)
+    bcrypt (3.1.13)
     concurrent-ruby (1.1.5)
     daemons (1.3.1)
     drb-websocket (0.5.1)
@@ -25,11 +25,11 @@ GEM
       rack
       thin
     eventmachine (1.2.7)
-    faye-websocket (0.10.7)
+    faye-websocket (0.10.9)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
-    ffi (1.10.0)
-    haml (5.0.4)
+    ffi (1.11.1)
+    haml (5.1.1)
       temple (>= 0.8.0)
       tilt
     hike (1.2.3)
@@ -37,7 +37,7 @@ GEM
       opal
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-    kame-remocon (0.2.6)
+    kame-remocon (0.2.7)
       drb-websocket (~> 0.5)
       haml (~> 5.0)
       hyalite (~> 0.3)
@@ -75,7 +75,7 @@ GEM
     parser (2.3.3.1)
       ast (~> 2.2)
     pg (1.1.4)
-    public_suffix (3.0.3)
+    public_suffix (3.1.1)
     rack (2.0.7)
     rack-protection (2.0.5)
       rack
@@ -89,9 +89,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sendgrid-ruby (5.3.0)
+    sendgrid-ruby (6.0.0)
       ruby_http_client (~> 3.3.0)
-      sinatra (>= 1.4.7, < 3)
     sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -121,9 +120,9 @@ GEM
     tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    websocket-driver (0.7.0)
+    websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.3)
+    websocket-extensions (0.1.4)
 
 PLATFORMS
   ruby
