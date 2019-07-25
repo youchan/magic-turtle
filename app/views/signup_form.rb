@@ -26,8 +26,8 @@ class SignupForm
             .gsub(/uid/, "メールアドレス")
             .gsub(/already exist/, "はすでに登録されています。")
             .gsub(/must not be empty/, "が入力されていません。"))
-        when :failure
-          set_state(error: "不明なエラーが発生しました。")
+      when :failure
+        set_state(error: "不明なエラーが発生しました。")
       end
     end
   end

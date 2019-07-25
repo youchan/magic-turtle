@@ -7,7 +7,7 @@ if development?
   require 'sinatra/reloader'
 end
 
-require_relative "./send_mail"
+require_relative "send_mail"
 
 class Server < Sinatra::Base
   OPAL = Opal::Sprockets::Server.new do |server|

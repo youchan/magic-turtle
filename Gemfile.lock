@@ -36,7 +36,7 @@ GEM
       opal
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-    kame-remocon (0.2.8)
+    kame-remocon (0.2.9)
       drb-websocket (~> 0.5)
       haml (~> 5.0)
       hyalite (~> 0.3)
@@ -65,7 +65,7 @@ GEM
       haml
       opal (>= 0.10, < 2)
       opal-sprockets (~> 0.4.1)
-    opal-sprockets (0.4.5.1.0.3.7)
+    opal-sprockets (0.4.6.1.0.3.7)
       opal (~> 1.0.0)
       sprockets (~> 3.7)
       tilt (>= 1.4)
@@ -76,7 +76,7 @@ GEM
     rack (2.0.7)
     rack-protection (2.0.5)
       rack
-    rake (12.3.2)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)

@@ -1,4 +1,4 @@
-require_relative "./account"
+require_relative "account"
 
 class Session < Menilite::Model
   field :account, :reference, class: Account

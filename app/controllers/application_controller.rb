@@ -14,6 +14,7 @@ class ApplicationController < Menilite::Controller
 
   action :login do |username, password|
     account = Account.fetch(filter: {uid: username}).first
+    pp account
 
     if account && account.auth(password)
       login =  Session.fetch(filter:{account_id: account.id, login: true}).first
@@ -30,7 +31,7 @@ class ApplicationController < Menilite::Controller
       login.save
       account.to_h
     else
-      raise "Login failed"
+      {error: "Login failed"}
     end
   end
 

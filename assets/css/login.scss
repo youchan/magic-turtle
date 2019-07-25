@@ -1,6 +1,10 @@
 //= require './bulma'
 //= require './fontawesome'
 
+.hidden {
+  display: none;
+}
+
 .hero {
   background-color: #f0f4f8;
 }
