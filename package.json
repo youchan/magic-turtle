@@ -6,8 +6,7 @@
   "scripts": {
     "debug": "webpack-dev-server --config webpack/debug.js",
     "development": "webpack-dev-server --config webpack/development.js",
-    "production_build": "parallel-webpack --config=webpack/production.js",
-    "heroku-postbuild": "yarn run production_build"
+    "production_build": "parallel-webpack --config=webpack/production.js"
   },
   "devDependencies": {
     "cache-loader": "^4.1.0",
