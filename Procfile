@@ -1,1 +1,0 @@
-webpack: yarn run development
