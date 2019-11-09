@@ -1,3 +1,4 @@
+require 'opal'
 require "hyalite"
 require "menilite"
 require_relative "models/account"

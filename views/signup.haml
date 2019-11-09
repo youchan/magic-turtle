@@ -1,7 +1,6 @@
 !!!
 %html(lang="en" data-framework="hyalite")
   %head
-    %link{rel:"stylesheet", href:"assets/css/signup.css"}
   %body
     %section.hero.is-fullheight
       .hero-body
@@ -9,5 +8,4 @@
           .box
             .content
 
-    = ::Opal::Sprockets.javascript_include_tag('signup', sprockets: settings.opal.sprockets, prefix: 'assets', debug: true)
-
+    = owl_script_tag('signup.js')

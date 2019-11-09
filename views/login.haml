@@ -1,7 +1,6 @@
 !!!
 %html(lang="en" data-framework="hyalite")
   %head
-    %link{rel:"stylesheet", href:"assets/css/login.css"}
   %body
     %section.hero.is-fullheight
       .hero-body
@@ -12,4 +11,4 @@
               %P アカウント登録してご利用ください。
             .content
 
-    = ::Opal::Sprockets.javascript_include_tag('login', sprockets: settings.opal.sprockets, prefix: 'assets', debug: true)
+    = owl_script_tag('login.js')

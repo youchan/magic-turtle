@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'opal'
-require 'opal/sprockets'
 require 'sinatra/activerecord'
 
 if development?
@@ -10,19 +9,9 @@ end
 require_relative "send_mail"
 
 class Server < Sinatra::Base
-  OPAL = Opal::Sprockets::Server.new do |server|
-    server.append_path "app"
-    server.append_path "assets"
-    Opal.use_gem "hyalite"
-    Opal.use_gem "menilite"
-    Opal.use_gem "kame-remocon"
-    Opal.paths.each {|path| server.append_path path }
-
-    server.main = "application"
-  end
+  include OpalWebpackLoader::ViewHelper
 
   configure do
-    set opal: OPAL
     enable :sessions
     set :protection, except: :json_csrf
   end
