@@ -1,6 +1,7 @@
 {
-  "application.js": "/assets/application-6935b8dbbb52b016b1c0.js",
-  "list.js": "/assets/list-a17603c8a55851824661.js",
-  "login.js": "/assets/login-a533c073a61d0640b810.js",
-  "signup.js": "/assets/signup-c864f2021f897f07aa5a.js"
+  "application.js": "/assets/application-d5c38f6b26a6c9799571.js",
+  "list.js": "/assets/list-106724d331fd6c0ae95a.js",
+  "login.js": "/assets/login-83d321d4ea300486864f.js",
+  "public_list.js": "/assets/public_list-dd80918d8e4e12b3059d.js",
+  "signup.js": "/assets/signup-2062f83c64c381074185.js"
 }

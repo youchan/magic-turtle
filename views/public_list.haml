@@ -1,11 +1,10 @@
 !!!
 %html(lang="en" data-framework="hyalite")
   %head
-    %link{rel:"stylesheet", href:"assets/css/application.css"}
   %body
     .content
       %h1 みんなの投稿
       %p=@url
       .public-list
 
-    = ::Opal::Sprockets.javascript_include_tag('public_list', sprockets: settings.opal.sprockets, prefix: 'assets', debug: true)
+    = owl_script_tag('public_list.js')

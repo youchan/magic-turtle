@@ -84,7 +84,8 @@ const browser_config = {
       application: [path.resolve(__dirname, '../javascripts/application.js')],
       login: [path.resolve(__dirname, '../javascripts/login.js')],
       signup: [path.resolve(__dirname, '../javascripts/signup.js')],
-      list: [path.resolve(__dirname, '../javascripts/list.js')]
+      list: [path.resolve(__dirname, '../javascripts/list.js')],
+      public_list: [path.resolve(__dirname, '../javascripts/public_list.js')]
     }
 };
 
