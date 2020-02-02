@@ -17,7 +17,7 @@ import './application_common.js';
 // import and load opal ruby files
 import init_app from 'public_list.rb';
 init_app();
-Opal.load('list');
+Opal.load('public_list');
 
 // allow for hot reloading
 if (module.hot) { module.hot.accept(); }
