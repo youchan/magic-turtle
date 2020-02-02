@@ -7,6 +7,7 @@ require 'sinatra/activerecord'
 require_relative 'owl_init'
 
 require_relative 'server'
+
 Dir[File.expand_path('../app/models/', __FILE__) + '/**/*.rb'].each {|file| require(file) }
 Dir[File.expand_path('../app/controllers/', __FILE__) + '/**/*.rb'].each {|file| require(file) }
 
