@@ -59,7 +59,6 @@ const common_config = {
             {
                 test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
                 use: [
-                  { loader: "cache-loader" },
                   {
                     loader: "file-loader",
                     options: {
