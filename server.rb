@@ -1,11 +1,11 @@
 require "sinatra"
 require "pony"
-require "goatmail"
 require "opal"
 require "sinatra/activerecord"
 
 if development?
   require "sinatra/reloader"
+  require "goatmail"
 end
 
 require_relative "send_mail"
