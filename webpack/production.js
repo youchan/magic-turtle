@@ -93,7 +93,8 @@ const browser_config = {
       login: [path.resolve(__dirname, '../javascripts/login.js')],
       signup: [path.resolve(__dirname, '../javascripts/signup.js')],
       list: [path.resolve(__dirname, '../javascripts/list.js')],
-      public_list: [path.resolve(__dirname, '../javascripts/public_list.js')]
+      public_list: [path.resolve(__dirname, '../javascripts/public_list.js')],
+      set_password: [path.resolve(__dirname, '../javascripts/set_password.js')]
     }
 };
 
