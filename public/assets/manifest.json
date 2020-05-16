@@ -1,5 +1,5 @@
 {
-  "application.js": "/assets/application-2323a8d7dcd27f17283d.js",
+  "application.js": "/assets/application-ea5c079e61efc42743df.js",
   "fonts/fa-brands-400.eot": "/assets/fonts/fa-brands-400.eot",
   "fonts/fa-brands-400.svg": "/assets/fonts/fa-brands-400.svg",
   "fonts/fa-brands-400.ttf": "/assets/fonts/fa-brands-400.ttf",
@@ -15,8 +15,9 @@
   "fonts/fa-solid-900.ttf": "/assets/fonts/fa-solid-900.ttf",
   "fonts/fa-solid-900.woff": "/assets/fonts/fa-solid-900.woff",
   "fonts/fa-solid-900.woff2": "/assets/fonts/fa-solid-900.woff2",
-  "list.js": "/assets/list-b839cb88d24b9ced37e8.js",
-  "login.js": "/assets/login-d8043da68829372a5010.js",
-  "public_list.js": "/assets/public_list-ed35cd0528dbcf2baadf.js",
-  "signup.js": "/assets/signup-e036cb9573b094b2730e.js"
+  "list.js": "/assets/list-393d85807c58e4e1b26b.js",
+  "login.js": "/assets/login-bd491e9d695187caf804.js",
+  "public_list.js": "/assets/public_list-824f11692d7fffd3e280.js",
+  "set_password.js": "/assets/set_password-c2f9d1e0dc0c1b128db8.js",
+  "signup.js": "/assets/signup-444e7916dc406072afbf.js"
 }
